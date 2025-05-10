@@ -7,9 +7,9 @@ interface Candidate {
 }
 
 const candidateData: Candidate[] = [
-  { name: "John Doe", role: "Software Engineer", stage: "Interview" },
-  { name: "Jane Smith", role: "Data Analyst", stage: "Offer" },
-  { name: "Robert Brown", role: "Project Manager", stage: "Rejected" },
+  { name: "John Doe", role: "Software Developer", stage: "Interview" },
+  { name: "Jane Smith", role: "Data Scientist", stage: "Offer" },
+  { name: "Robert Brown", role: "Product Manager", stage: "Rejected" },
   { name: "Alice Green", role: "UX Designer", stage: "Applied" },
 ];
 

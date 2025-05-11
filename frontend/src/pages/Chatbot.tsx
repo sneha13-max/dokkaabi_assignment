@@ -41,12 +41,12 @@ const Chatbot: React.FC = () => {
     setAudioUrl(null);
 
     try {
-      const response = await axios.post("http://localhost:8000/api/tts", {
+      const response = await axios.post("http://localhost:8000/api/tts", { // called backend to convert text to audio url (speech url)
         text,
       });
-      setAudioUrl(response.data.audio_url);
+      setAudioUrl(response.data.audio_url); // Saved audio url by use of hook
     } catch (error) {
-      console.error("Error generating TTS:", error);
+      console.error("Error generating TTS:", error); //if any error occur then it will be called
     } finally {
       setLoadingTTS(false);
     }
@@ -83,7 +83,7 @@ const Chatbot: React.FC = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/stt/123",
+        "http://localhost:8000/api/stt/123", // similarly audio file is sent to backend to get transcript (speech)
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
